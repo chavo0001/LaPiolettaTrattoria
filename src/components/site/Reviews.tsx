@@ -1,62 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const reviews = [
-  {
-    text: "Ambiente accogliente, cucina ottima e personale gentile. Una vera trattoria come piace a noi.",
-    author: "Cliente Google",
-  },
-  {
-    text: "Piatti abbondanti e sapori autentici. Ci siamo sentiti davvero a casa.",
-    author: "Cliente Tripadvisor",
-  },
-  {
-    text: "Ottima scoperta a Rivoli. Consigliato per una cena tranquilla e genuina.",
-    author: "Cliente Facebook",
-  },
+  { text: "Ambiente accogliente, cucina ottima e personale gentile. Una vera trattoria come piace a noi.", author: "Cliente Google" },
+  { text: "Piatti abbondanti e sapori autentici. Ci siamo sentiti davvero a casa.", author: "Cliente Tripadvisor" },
+  { text: "Ottima scoperta a Rivoli. Consigliato per una cena tranquilla e genuina.", author: "Cliente Facebook" },
 ];
 
 export function Reviews() {
   return (
-    <section id="recensioni" className="bg-secondary/40 py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-10">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="divider-ornament text-xs uppercase tracking-[0.25em]">
-            Le recensioni
-          </span>
-          <h2 className="mt-5 font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
-            Cosa dicono i nostri <span className="italic text-wine">clienti</span>
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground text-balance">
-            Oltre 600 recensioni raccontano l’esperienza di chi è già stato da noi.
-          </p>
-
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-wine/10 px-5 py-2.5">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-wine text-wine" />
-              ))}
+    <section id="recensioni" className="bg-espresso py-24 lg:py-36">
+      <div className="mx-auto max-w-7xl px-5 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-10 items-end">
+          <div className="lg:col-span-7">
+            <span className="eyebrow"><span className="rule" />Le recensioni</span>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05]">
+              Una trattoria scelta
+              <span className="block italic text-sand font-light">dai clienti.</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-cream/70 leading-relaxed">
+              Oltre 600 recensioni raccontano l’esperienza di chi è già stato da noi.
+            </p>
+            <div className="mt-5 inline-flex items-center gap-3 border border-cream/25 px-5 py-2.5">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-sand text-sand" />
+                ))}
+              </div>
+              <span className="text-sm font-medium text-cream tracking-wide">4,4 / 5 · Google</span>
             </div>
-            <span className="font-medium text-wine">Valutazione media 4,4 / 5</span>
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-cream/10">
           {reviews.map((r, i) => (
-            <figure
-              key={i}
-              className="relative rounded-lg border border-border bg-card p-8 shadow-sm"
-            >
-              <Quote className="absolute top-6 right-6 h-8 w-8 text-wine/15" />
-              <div className="flex">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-sand text-sand" />
-                ))}
-              </div>
-              <blockquote className="mt-5 font-display text-xl leading-snug text-foreground italic">
-                “{r.text}”
+            <figure key={i} className="bg-espresso p-8 lg:p-10">
+              <span className="font-display italic text-5xl text-sand leading-none">“</span>
+              <blockquote className="mt-2 font-display text-xl lg:text-2xl text-cream leading-snug italic font-light">
+                {r.text}
               </blockquote>
-              <figcaption className="mt-5 text-sm font-medium text-muted-foreground">
+              <figcaption className="mt-8 text-[10px] tracking-[0.3em] uppercase text-cream/50">
                 — {r.author}
               </figcaption>
             </figure>
@@ -64,13 +49,13 @@ export function Reviews() {
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild variant="wine" size="lg">
-            <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">
+          <Button asChild variant="editorial" size="lg">
+            <a href="https://www.google.com/maps/place/Trattoria+A+Casa+Mia" target="_blank" rel="noreferrer">
               Leggi le recensioni
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">
+          <Button asChild variant="editorial" size="lg">
+            <a href="https://www.google.com/maps/place/Trattoria+A+Casa+Mia" target="_blank" rel="noreferrer">
               Lascia una recensione
             </a>
           </Button>

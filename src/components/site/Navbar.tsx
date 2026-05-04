@@ -7,6 +7,7 @@ const links = [
   { href: "#home", label: "Home" },
   { href: "#trattoria", label: "La Trattoria" },
   { href: "#menu", label: "Menu" },
+  { href: "#prenota", label: "Prenota" },
   { href: "#recensioni", label: "Recensioni" },
   { href: "#dove-siamo", label: "Dove siamo" },
 ];
@@ -16,7 +17,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 32);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -25,92 +26,55 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border/60 shadow-sm"
-          : "bg-transparent"
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        scrolled ? "bg-ink/85 backdrop-blur-md border-b border-cream/10" : "bg-transparent"
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-12">
         <a href="#home" className="flex flex-col leading-none">
-          <span
-            className={cn(
-              "font-display text-xl md:text-2xl tracking-tight",
-              scrolled ? "text-foreground" : "text-cream"
-            )}
-          >
-            Trattoria
-          </span>
-          <span
-            className={cn(
-              "font-display italic text-base md:text-lg -mt-1",
-              scrolled ? "text-wine" : "text-sand"
-            )}
-          >
+          <span className="font-display text-xl md:text-2xl text-cream">Trattoria</span>
+          <span className="font-display italic text-base md:text-lg -mt-1 text-sand font-light">
             A Casa Mia
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-9">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className={cn(
-                "text-sm font-medium tracking-wide transition-colors hover:text-wine",
-                scrolled ? "text-foreground/80" : "text-cream/90"
-              )}
-            >
+            <a key={l.href} href={l.href}
+              className="text-[11px] font-medium tracking-[0.22em] uppercase text-cream/80 hover:text-sand transition-colors">
               {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="tel:0119561186"
-            className={cn(
-              "flex items-center gap-2 text-sm font-medium",
-              scrolled ? "text-foreground/80" : "text-cream/90"
-            )}
-          >
-            <Phone className="h-4 w-4" /> 011 956 1186
+        <div className="hidden lg:flex items-center gap-5">
+          <a href="tel:0119561186"
+            className="flex items-center gap-2 text-xs tracking-wider text-cream/80 hover:text-sand transition-colors">
+            <Phone className="h-3.5 w-3.5" /> 011 956 1186
           </a>
-          <Button asChild variant="wine" size="sm">
-            <a href="#prenota">Prenota</a>
-          </Button>
         </div>
 
-        <button
-          aria-label="Apri menu"
-          className={cn(
-            "lg:hidden p-2 rounded-md",
-            scrolled ? "text-foreground" : "text-cream"
-          )}
-          onClick={() => setOpen((o) => !o)}
-        >
+        <button aria-label="Apri menu"
+          className="lg:hidden p-2 text-cream"
+          onClick={() => setOpen((o) => !o)}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden bg-background border-t border-border">
-          <div className="flex flex-col px-5 py-4 gap-1">
+        <div className="lg:hidden bg-ink border-t border-cream/10">
+          <div className="flex flex-col px-5 py-6 gap-1">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="py-2.5 text-base text-foreground/90 border-b border-border/60"
-              >
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+                className="py-3 text-base text-cream/90 border-b border-cream/10 tracking-wide">
                 {l.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-4">
-              <Button asChild variant="outline" className="flex-1">
+            <div className="flex gap-3 pt-5">
+              <Button asChild variant="editorial" className="flex-1">
                 <a href="tel:0119561186"><Phone className="h-4 w-4 mr-2" />Chiama</a>
               </Button>
-              <Button asChild variant="wine" className="flex-1">
+              <Button asChild variant="cream" className="flex-1">
                 <a href="#prenota" onClick={() => setOpen(false)}>Prenota</a>
               </Button>
             </div>
