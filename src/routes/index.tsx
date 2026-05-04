@@ -3,6 +3,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { Taste } from "@/components/site/Taste";
 import { Intro } from "@/components/site/Intro";
+import { Concept } from "@/components/site/Concept";
 import { MenuSection } from "@/components/site/Menu";
 import { Reservation } from "@/components/site/Reservation";
 import { Reviews } from "@/components/site/Reviews";
@@ -39,6 +40,7 @@ function Index() {
       <Hero />
       <Taste />
       <Intro />
+      <Concept />
       <MenuSection />
       <Reservation />
       <Reviews />

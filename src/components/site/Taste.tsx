@@ -1,76 +1,78 @@
-import { Button } from "@/components/ui/button";
-import agnolotti from "@/assets/dish-agnolotti.jpg";
-import table from "@/assets/table-set.jpg";
-import wine from "@/assets/wine-cheers.jpg";
-import pasta from "@/assets/pasta-hands.jpg";
+import antipasti from "@/assets/real-antipasti.jpg";
+import tartare from "@/assets/real-tartare.jpg";
+import melanzane from "@/assets/real-melanzane.jpg";
+import fiorentina from "@/assets/real-fiorentina.jpg";
 
 export function Taste() {
   return (
-    <section className="bg-background py-16 lg:py-24">
-      <div className="mx-auto max-w-6xl px-5 lg:px-10">
-        <div className="max-w-2xl">
-          <span className="divider-ornament text-xs uppercase tracking-[0.25em]">
-            Assaggio
-          </span>
-          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
-            Sapori di casa, <span className="italic text-wine">a colpo d’occhio</span>
-          </h2>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            Piatti semplici, caldi e tradizionali, pensati per farvi sentire davvero a casa.
-          </p>
-        </div>
+    <section className="relative bg-ink py-24 lg:py-36 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-5 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* Text column */}
+          <div className="lg:col-span-4 lg:sticky lg:top-32">
+            <span className="eyebrow"><span className="rule" />Cucina</span>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05]">
+              Sapori di casa,
+              <span className="block italic text-sand font-light">con uno sguardo nuovo.</span>
+            </h2>
+            <p className="mt-8 text-base text-cream/70 leading-relaxed max-w-md">
+              Piatti semplici, caldi e tradizionali, raccontati con la cura che meritano.
+              Carne, pasta fresca e ricette piemontesi pensate per essere condivise.
+            </p>
+          </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {/* Foto principale */}
-          <div className="relative col-span-2 md:col-span-2 md:row-span-2 overflow-hidden rounded-xl shadow-sm aspect-[4/3] md:aspect-[5/4]">
-            <img
-              src={agnolotti}
-              alt="Agnolotti al sugo d’arrosto"
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-            />
-            <div className="absolute left-3 bottom-3 md:left-4 md:bottom-4">
-              <span className="inline-block rounded-full bg-ink/70 backdrop-blur-sm px-3 py-1.5 text-[11px] md:text-xs font-medium tracking-wide text-cream">
-                Cucina italiana · atmosfera familiare
-              </span>
+          {/* Asymmetric photo composition */}
+          <div className="lg:col-span-8 relative">
+            <div className="grid grid-cols-12 gap-4 lg:gap-6">
+              <figure className="col-span-8 lg:col-span-7">
+                <img
+                  src={fiorentina}
+                  alt="Fiorentina alla griglia"
+                  className="w-full aspect-[4/5] object-cover"
+                  loading="lazy"
+                />
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
+                  01 — Fiorentina
+                </figcaption>
+              </figure>
+
+              <figure className="col-span-4 lg:col-span-5 mt-12 lg:mt-24">
+                <img
+                  src={tartare}
+                  alt="Tartare di carne in quattro varianti"
+                  className="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                />
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
+                  02 — Tartare
+                </figcaption>
+              </figure>
+
+              <figure className="col-span-7 lg:col-span-6 lg:col-start-2 -mt-4 lg:-mt-12">
+                <img
+                  src={antipasti}
+                  alt="Antipasto misto con carpaccio e vitello"
+                  className="w-full aspect-[5/4] object-cover"
+                  loading="lazy"
+                />
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
+                  03 — Antipasti
+                </figcaption>
+              </figure>
+
+              <figure className="col-span-5 lg:col-span-4 mt-8">
+                <img
+                  src={melanzane}
+                  alt="Melanzane stufate"
+                  className="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                />
+                <figcaption className="mt-3 text-[10px] tracking-[0.3em] uppercase text-cream/50">
+                  04 — Verdure
+                </figcaption>
+              </figure>
             </div>
           </div>
-
-          <div className="overflow-hidden rounded-xl shadow-sm aspect-square">
-            <img
-              src={pasta}
-              alt="Pasta fresca tirata a mano"
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-            />
-          </div>
-
-          <div className="overflow-hidden rounded-xl shadow-sm aspect-square">
-            <img
-              src={table}
-              alt="Tavolo apparecchiato"
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-            />
-          </div>
-
-          <div className="hidden md:block overflow-hidden rounded-xl shadow-sm aspect-square col-start-3">
-            <img
-              src={wine}
-              alt="Brindisi con vino rosso"
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-
-        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          <Button asChild variant="hero" size="lg">
-            <a href="#prenota">Prenota un tavolo</a>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href="#menu">Guarda il menu</a>
-          </Button>
         </div>
       </div>
     </section>
