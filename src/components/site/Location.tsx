@@ -54,9 +54,9 @@ export function Location() {
               </div>
               <Button asChild variant="outline" className="mt-5 w-full">
                 <a
-                  href="https://maps.google.com/?q=Corso+Francia+28+Rivoli+TO"
+                  href="https://www.google.com/maps/place/Trattoria+A+Casa+Mia/@45.0702341,7.5215887,17z/data=!3m1!4b1!4m6!3m5!1s0x47886aa1dfee4505:0x7164252d327e1ff1!8m2!3d45.0702303!4d7.5241636!16s%2Fg%2F1thkql5v"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Apri su Google Maps <ExternalLink className="h-4 w-4" />
                 </a>
