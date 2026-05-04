@@ -4,15 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("https://fonts.gstatic.com/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjornFLsS6V7w.woff2") format("woff2");
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -43,111 +35,99 @@
   --color-cream: var(--cream);
   --color-sand: var(--sand);
   --color-ink: var(--ink);
+  --color-espresso: var(--espresso);
   --color-sage: var(--sage);
   --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-body: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Cream & Wine palette */
-  --cream: oklch(0.972 0.018 85);          /* #faf6ee */
-  --sand: oklch(0.872 0.035 80);           /* #d9c9a8 */
-  --wine: oklch(0.345 0.115 25);           /* #5c1a1b */
-  --wine-foreground: oklch(0.98 0.012 85);
-  --ink: oklch(0.215 0.015 60);            /* #2a2422 */
-  --sage: oklch(0.78 0.04 130);
+  /* Warm dark trattoria palette */
+  --ink: oklch(0.16 0.012 50);              /* warm anthracite/near-black */
+  --espresso: oklch(0.24 0.02 45);          /* deep espresso brown */
+  --cream: oklch(0.95 0.022 80);            /* warm ivory */
+  --sand: oklch(0.82 0.05 75);              /* warm beige */
+  --wine: oklch(0.45 0.14 22);              /* bordeaux accent */
+  --wine-foreground: oklch(0.96 0.018 80);
+  --sage: oklch(0.62 0.05 130);
 
-  --background: var(--cream);
-  --foreground: var(--ink);
-  --card: oklch(0.985 0.012 85);
-  --card-foreground: var(--ink);
-  --popover: oklch(0.985 0.012 85);
-  --popover-foreground: var(--ink);
+  /* App tokens — DARK by default */
+  --background: var(--ink);
+  --foreground: var(--cream);
+  --card: oklch(0.20 0.015 50);
+  --card-foreground: var(--cream);
+  --popover: oklch(0.20 0.015 50);
+  --popover-foreground: var(--cream);
   --primary: var(--wine);
   --primary-foreground: var(--wine-foreground);
-  --secondary: oklch(0.92 0.025 80);
-  --secondary-foreground: var(--ink);
-  --muted: oklch(0.93 0.02 80);
-  --muted-foreground: oklch(0.45 0.02 60);
+  --secondary: oklch(0.22 0.018 50);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.24 0.015 50);
+  --muted-foreground: oklch(0.72 0.02 70);
   --accent: var(--sand);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.98 0.012 85);
-  --border: oklch(0.86 0.025 80);
-  --input: oklch(0.9 0.02 80);
+  --border: oklch(0.30 0.018 50);
+  --input: oklch(0.28 0.015 50);
   --ring: var(--wine);
 }
 
-.dark {
-  --background: oklch(0.18 0.012 60);
-  --foreground: var(--cream);
-  --card: oklch(0.22 0.015 60);
-  --card-foreground: var(--cream);
-  --popover: oklch(0.22 0.015 60);
-  --popover-foreground: var(--cream);
-  --primary: oklch(0.55 0.16 25);
-  --primary-foreground: var(--cream);
-  --secondary: oklch(0.28 0.02 60);
-  --secondary-foreground: var(--cream);
-  --muted: oklch(0.28 0.02 60);
-  --muted-foreground: oklch(0.7 0.02 60);
-  --accent: oklch(0.32 0.04 70);
-  --accent-foreground: var(--cream);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.55 0.16 25);
-}
-
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
-    font-feature-settings: "ss01", "ss02";
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01";
   }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
   }
+  ::selection { background: var(--wine); color: var(--cream); }
 }
 
 @layer utilities {
   .font-display { font-family: var(--font-display); }
   .font-body { font-family: var(--font-body); }
-
   .text-balance { text-wrap: balance; }
 
-  .divider-ornament {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--wine);
-  }
-  .divider-ornament::before,
-  .divider-ornament::after {
-    content: "";
-    width: 2.5rem;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.5;
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--sand);
   }
 
-  .paper-texture {
+  .rule {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1px;
+    background: var(--sand);
+    vertical-align: middle;
+    margin-right: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image:
-      radial-gradient(oklch(0.85 0.04 70 / 0.18) 1px, transparent 1px);
-    background-size: 22px 22px;
+      radial-gradient(oklch(0.95 0.02 80 / 0.04) 1px, transparent 1px);
+    background-size: 3px 3px;
+    pointer-events: none;
+    mix-blend-mode: overlay;
   }
 }
