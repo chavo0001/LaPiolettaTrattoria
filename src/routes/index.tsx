@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
+import { Taste } from "@/components/site/Taste";
 import { Intro } from "@/components/site/Intro";
 import { MenuSection } from "@/components/site/Menu";
 import { Reservation } from "@/components/site/Reservation";
@@ -36,6 +37,7 @@ function Index() {
     <main className="min-h-screen bg-background pb-16 lg:pb-0">
       <Navbar />
       <Hero />
+      <Taste />
       <Intro />
       <MenuSection />
       <Reservation />
