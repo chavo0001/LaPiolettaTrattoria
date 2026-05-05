@@ -22,9 +22,9 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mt-8 font-display text-[3.25rem] leading-[0.95] text-cream md:text-[5.5rem] lg:text-[7rem]">
-            Trattoria
-            <span className="block italic text-sand font-light">A Casa Mia</span>
+          <h1 className="mt-8 font-sign text-[3.5rem] leading-[1] text-cream md:text-[6rem] lg:text-[7.5rem] tracking-wide">
+            <span className="block">Trattoria</span>
+            <span className="block">A Casa Mia</span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg md:text-xl text-cream/80 text-balance leading-relaxed">
