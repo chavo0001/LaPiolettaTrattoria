@@ -23,9 +23,21 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mt-8 font-sign text-[3.5rem] leading-[1] text-cream md:text-[6rem] lg:text-[7.5rem] tracking-wide">
-            <span className="block">Trattoria</span>
-            <span className="block">A Casa Mia</span>
+          <h1 className="mt-8">
+            <span className="sr-only">Trattoria A Casa Mia</span>
+            <span
+              aria-hidden="true"
+              className="block w-full max-w-[640px] rounded-sm bg-[#0a0d18] p-5 md:p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7)] ring-1 ring-cream/10"
+            >
+              <img
+                src={insegna}
+                alt=""
+                width={1600}
+                height={896}
+                className="block h-auto w-full select-none"
+                draggable={false}
+              />
+            </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg md:text-xl text-cream/80 text-balance leading-relaxed">
