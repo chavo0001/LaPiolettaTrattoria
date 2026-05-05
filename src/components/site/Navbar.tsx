@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo-casamia.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -31,10 +32,21 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-12">
-        <a href="#home" className="flex flex-col leading-none">
-          <span className="font-display text-xl md:text-2xl text-cream">Trattoria</span>
-          <span className="font-display italic text-base md:text-lg -mt-1 text-sand font-light">
-            A Casa Mia
+        <a href="#home" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Trattoria A Casa Mia"
+            className="h-12 w-12 md:h-14 md:w-14 object-contain"
+            width={64}
+            height={64}
+          />
+          <span className="hidden sm:flex flex-col leading-none">
+            <span className="font-sign text-lg md:text-xl text-cream tracking-wide">
+              Trattoria A Casa Mia
+            </span>
+            <span className="font-body text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-sand/80 mt-1">
+              Le migliori carni per passione
+            </span>
           </span>
         </a>
 
