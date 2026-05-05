@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import heroImg from "@/assets/real-interior-1.jpg";
+import insegna from "@/assets/insegna-wordmark.png";
 
 export function Hero() {
   return (
