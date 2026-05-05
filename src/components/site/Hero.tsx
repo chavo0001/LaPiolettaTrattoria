@@ -22,7 +22,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="insegna-title mt-8 leading-[0.95] tracking-[0.01em] text-[3.5rem] sm:text-7xl md:text-8xl lg:text-[9rem]">
+          <h1 className="insegna-title mt-8 leading-[0.95] tracking-[0.01em] text-[2.8rem] sm:text-6xl md:text-7xl lg:text-[7.2rem]">
             <span className="block">TRATTORIA</span>
             <span className="block">A CASA MIA</span>
           </h1>
