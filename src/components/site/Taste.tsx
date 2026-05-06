@@ -12,12 +12,18 @@ export function Taste() {
           <div className="lg:col-span-4 lg:sticky lg:top-32">
             <span className="eyebrow"><span className="rule" />Cucina</span>
             <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05]">
-              Sapori di casa,
-              <span className="block italic text-sand font-light">con uno sguardo nuovo.</span>
+              Il piacere della carne,
+              <span className="block italic text-sand font-light">il calore della trattoria.</span>
             </h2>
             <p className="mt-8 text-base text-cream/70 leading-relaxed max-w-md">
-              Piatti semplici, caldi e tradizionali, raccontati con la cura che meritano.
-              Carne, pasta fresca e ricette piemontesi pensate per essere condivise.
+              Da A Casa Mia la cucina e fatta di sapori riconoscibili, materie prime
+              scelte e una forte attenzione alla carne: tagli selezionati, frollature
+              curate e piatti pensati per essere gustati con calma.
+            </p>
+            <p className="mt-5 text-base text-cream/70 leading-relaxed max-w-md">
+              Il tutto accompagnato da una proposta di vini capace di rendere ogni
+              tavolo piu completo, senza perdere l&apos;atmosfera semplice e accogliente
+              di una vera trattoria.
             </p>
           </div>
 
