@@ -13,6 +13,7 @@ dist
 dist-ssr
 .output
 .vinxi
+.netlify/
 .tanstack/**
 .nitro
 *.local
