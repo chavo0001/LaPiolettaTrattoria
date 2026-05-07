@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Star } from "lucide-react";
 import heroImg from "@/assets/real-interior-1.jpg";
+import heroWordmark from "@/assets/hero-wordmark.png";
 
 const socialLinks = [
   {
@@ -21,7 +22,7 @@ export function Hero() {
       <img
         src={heroImg}
         alt="Sala interna della Trattoria A Casa Mia a Rivoli"
-        className="absolute inset-0 h-full w-full object-cover opacity-65"
+        className="absolute inset-0 h-full w-full object-cover opacity-[0.78]"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/55 to-ink" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent" />
@@ -35,14 +36,18 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="insegna-title mt-8 leading-[0.95] tracking-[0.01em] text-[2.8rem] sm:text-6xl md:text-7xl lg:text-[7.2rem]">
-            <span className="block">TRATTORIA</span>
-            <span className="block">A CASA MIA</span>
-          </h1>
+          <h1 className="sr-only">Trattoria A Casa Mia</h1>
+          <img
+            src={heroWordmark}
+            alt=""
+            aria-hidden="true"
+            className="mt-8 block w-full max-w-[36.8rem] drop-shadow-[0_2px_18px_rgb(0_0_0_/_0.45)] md:max-w-[40rem] lg:max-w-[43.2rem]"
+          />
 
-          <p className="mt-8 max-w-xl text-lg md:text-xl text-cream/80 text-balance leading-relaxed">
+          <p className="mt-10 max-w-xl text-sm md:text-base text-cream/82 leading-relaxed">
             In centro a Rivoli da oltre 20 anni, carni frollate e ottimo vino
-La tradizione ha un sapore rivoluzionario 
+            <br />
+            La tradizione ha un sapore rivoluzionario
           </p>
 
           <p className="mt-5 text-xs tracking-[0.28em] uppercase text-cream/60">

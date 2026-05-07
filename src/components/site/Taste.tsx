@@ -16,9 +16,10 @@ export function Taste() {
               <span className="block italic text-sand font-light">il calore della trattoria.</span>
             </h2>
             <p className="mt-8 text-base text-cream/70 leading-relaxed max-w-md">
-              Da A Casa Mia la cucina e fatta di sapori riconoscibili, materie prime
-              scelte e una forte attenzione alla carne: tagli selezionati, frollature
-              curate e piatti pensati per essere gustati con calma.
+              Da <span className="italic">A Casa Mia</span> la cucina e fatta di
+              sapori riconoscibili, materie prime scelte e una forte attenzione alla
+              carne: tagli selezionati, frollature curate e piatti pensati per essere
+              gustati con calma.
             </p>
             <p className="mt-5 text-base text-cream/70 leading-relaxed max-w-md">
               Il tutto accompagnato da una proposta di vini capace di rendere ogni

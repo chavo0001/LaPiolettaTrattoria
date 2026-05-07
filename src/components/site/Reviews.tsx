@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 
+const googleReviewsUrl =
+  "https://www.google.com/search?client=firefox-b-d&hs=vWV&sa=X&sca_esv=2139bdf85252c619&sxsrf=ANbL-n4qw_S9N8gDBMw7neMXRf0zSvm0Ow:1778087565594&q=Trattoria+A+Casa+Mia+Recensioni&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2MDQ3MLM0MzUAAnMLAxNLQ-MNjIyvGOVDihJLSvKLMhMVHBWcE4sTFXyBzKDU5NS84sz8vMxFrIRUAADXIOq5XgAAAA&rldimm=8170696500007804913&tbm=lcl&hl=it-IT&ved=2ahUKEwjZ8-etlKWUAxVKzgIHHa3eDiIQ9fQKegQISBAG&biw=1536&bih=751&dpr=1.25#lkt=LocalPoiReviews";
+const googleWriteReviewUrl =
+  "https://www.google.com/search?q=Trattoria+A+Casa+Mia+Rivoli&ludocid=8170696500007804913#lrd=0x0:0x7164252d327e1ff1,3,,,,";
+
 const reviews = [
   { text: "Ambiente accogliente, cucina ottima e personale gentile. Una vera trattoria come piace a noi.", author: "Cliente Google" },
   { text: "Piatti abbondanti e sapori autentici. Ci siamo sentiti davvero a casa.", author: "Cliente Tripadvisor" },
@@ -50,12 +55,12 @@ export function Reviews() {
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild variant="editorial" size="lg">
-            <a href="https://www.google.com/maps/place/Trattoria+A+Casa+Mia" target="_blank" rel="noreferrer">
+            <a href={googleReviewsUrl} target="_blank" rel="noreferrer">
               Leggi le recensioni
             </a>
           </Button>
           <Button asChild variant="editorial" size="lg">
-            <a href="https://www.google.com/maps/place/Trattoria+A+Casa+Mia" target="_blank" rel="noreferrer">
+            <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
               Lascia una recensione
             </a>
           </Button>
