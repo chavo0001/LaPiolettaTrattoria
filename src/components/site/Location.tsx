@@ -12,7 +12,7 @@ const hours = [
 ];
 
 const MAPS_URL =
-  "https://www.google.com/maps/place/Trattoria+A+Casa+Mia/@45.0702341,7.5215887,17z/data=!3m1!4b1!4m6!3m5!1s0x47886aa1dfee4505:0x7164252d327e1ff1!8m2!3d45.0702303!4d7.5241636!16s%2Fg%2F1thkql5v";
+  "https://www.google.com/maps/place/La+Pioletta+Trattoria+Piemontese+Via+San+Domenico+4+Torino";
 
 export function Location() {
   return (
@@ -21,20 +21,19 @@ export function Location() {
         <div className="max-w-2xl">
           <span className="eyebrow"><span className="rule" />Contatti</span>
           <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05]">
-            Dove
-            <span className="italic text-sand font-light"> siamo.</span>
+            Nel Quadrilatero
+            <span className="italic text-sand font-light"> Romano di Torino.</span>
           </h2>
           <p className="mt-6 text-cream/70 leading-relaxed">
-            Siamo a Rivoli, in Corso Francia, facilmente raggiungibili dal centro città
-            e dai comuni vicini.
+            La Pioletta Trattoria Piemontese è in Via San Domenico 4, nel cuore del Quadrilatero Romano. Facile da raggiungere a piedi, in auto o con i mezzi pubblici dal centro di Torino.
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
           <div className="lg:col-span-3 overflow-hidden border border-cream/10 min-h-[420px]">
             <iframe
-              title="Mappa Trattoria A Casa Mia"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=7.5180%2C45.0680%2C7.5310%2C45.0735&layer=mapnik&marker=45.0702%2C7.5241"
+              title="Mappa La Pioletta Trattoria Piemontese"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=7.6850%2C45.0715%2C7.6950%2C45.0765&layer=mapnik&marker=45.0740%2C7.6900"
               className="w-full h-full min-h-[420px] border-0 grayscale-[30%]"
               loading="lazy"
             />
@@ -46,7 +45,7 @@ export function Location() {
                 <MapPin className="h-3.5 w-3.5" /> Indirizzo
               </span>
               <p className="mt-3 font-display text-2xl text-cream italic font-light">
-                Corso Francia 28<br />10098 Rivoli TO
+                Via San Domenico 4<br />10122 Torino TO
               </p>
               <Button asChild variant="editorial" size="lg" className="mt-5 w-full">
                 <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
@@ -59,8 +58,8 @@ export function Location() {
               <span className="text-[10px] tracking-[0.3em] uppercase text-cream/50 flex items-center gap-2">
                 <Phone className="h-3.5 w-3.5" /> Telefono
               </span>
-              <a href="tel:0119561186" className="mt-3 block font-display text-2xl text-sand italic font-light">
-                011 956 1186
+              <a href="tel:3514233563" className="mt-3 block font-display text-2xl text-sand italic font-light">
+                351 423 3563
               </a>
             </div>
 

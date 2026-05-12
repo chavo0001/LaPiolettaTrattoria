@@ -10,4 +10,14 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 export default defineConfig({
   cloudflare: false,
   plugins: [netlify()],
+  vite: {
+    server: {
+      host: "127.0.0.1",
+      port: 8080,
+      strictPort: true,
+    },
+    optimizeDeps: {
+      include: ["lucide-react"],
+    },
+  },
 });

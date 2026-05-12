@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo-casamia.png";
+import logo from "@/assets/pioletta-logo-bianco.png";
 
 const links = [
   { href: "#home", label: "Home" },
-  { href: "#trattoria", label: "La Trattoria" },
+  { href: "#trattoria", label: "La Pioletta" },
   { href: "#menu-pdf", label: "Menu" },
   { href: "#prenota", label: "Prenota" },
   { href: "#recensioni", label: "Recensioni" },
@@ -32,22 +32,17 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-12">
-        <a href="#home" className="flex items-center gap-3">
+        <a
+          href="#home"
+          className="flex h-14 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-xl shadow-black/20 ring-1 ring-cream/20 md:h-16 md:w-44"
+        >
           <img
             src={logo}
-            alt="Trattoria A Casa Mia"
-            className="h-12 w-12 md:h-14 md:w-14 object-contain"
-            width={64}
+            alt="La Pioletta Trattoria Piemontese"
+            className="h-full w-full scale-[1.28] object-contain"
+            width={176}
             height={64}
           />
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="font-sign text-lg md:text-xl text-cream tracking-wide">
-              Trattoria A Casa Mia
-            </span>
-            <span className="font-body text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-sand/80 mt-1">
-              Le migliori carni per passione
-            </span>
-          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-9">
@@ -60,9 +55,9 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-5">
-          <a href="tel:0119561186"
+          <a href="tel:3514233563"
             className="flex items-center gap-2 text-xs tracking-wider text-cream/80 hover:text-sand transition-colors">
-            <Phone className="h-3.5 w-3.5" /> 011 956 1186
+            <Phone className="h-3.5 w-3.5" /> 351 423 3563
           </a>
         </div>
 
@@ -84,7 +79,7 @@ export function Navbar() {
             ))}
             <div className="flex gap-3 pt-5">
               <Button asChild variant="editorial" className="flex-1">
-                <a href="tel:0119561186"><Phone className="h-4 w-4 mr-2" />Chiama</a>
+                <a href="tel:3514233563"><Phone className="h-4 w-4 mr-2" />Chiama</a>
               </Button>
               <Button asChild variant="cream" className="flex-1">
                 <a href="#prenota" onClick={() => setOpen(false)}>Prenota</a>

@@ -1,8 +1,8 @@
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 const socialLinks = {
-  instagram: "https://www.instagram.com/trattoria_a_casamia/",
-  facebook: "https://www.facebook.com/p/Trattoria-A-Casa-Mia-Rivoli-100063458896018/",
+  instagram: "https://www.instagram.com/pioletta_trattoriapiemontese/",
+  facebook: "https://www.thefork.it/ristorante/pioletta-trattoria-piemontese-r855605",
 };
 
 export function Footer() {
@@ -12,14 +12,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="font-display leading-none">
-              <div className="text-3xl text-cream">Trattoria</div>
-              <div className="text-4xl italic text-sand -mt-1 font-light">A Casa Mia</div>
+              <div className="text-3xl text-cream">La Pioletta</div>
+              <div className="text-4xl italic text-sand -mt-1 font-light">Trattoria Piemontese</div>
             </div>
             <p className="mt-6 max-w-sm text-cream/60 leading-relaxed">
-              Cucina italiana e atmosfera familiare nel cuore di Rivoli.
+              Agnolotti, plin, vitello tonnato e i sapori autentici della cucina piemontese nel cuore di Torino.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"
+              <a href={socialLinks.facebook} target="_blank" rel="noreferrer" aria-label="TheFork"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:bg-wine hover:border-wine transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
@@ -34,7 +34,7 @@ export function Footer() {
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-cream/50">Naviga</h4>
             <ul className="mt-5 space-y-2.5 text-sm">
               <li><a href="#home" className="hover:text-sand transition-colors">Home</a></li>
-              <li><a href="#trattoria" className="hover:text-sand transition-colors">La Trattoria</a></li>
+              <li><a href="#trattoria" className="hover:text-sand transition-colors">La Pioletta</a></li>
               <li><a href="#menu-pdf" className="hover:text-sand transition-colors">Menu</a></li>
               <li><a href="#prenota" className="hover:text-sand transition-colors">Prenota</a></li>
               <li><a href="#recensioni" className="hover:text-sand transition-colors">Recensioni</a></li>
@@ -47,19 +47,19 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-sand" />
-                <span>Corso Francia 28<br />10098 Rivoli TO</span>
+                <span>Via San Domenico 4<br />10122 Torino TO</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-sand" />
-                <a href="tel:0119561186" className="hover:text-sand transition-colors">011 956 1186</a>
+                <a href="tel:3514233563" className="hover:text-sand transition-colors">351 423 3563</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-cream/50">
-          <span>© {new Date().getFullYear()} Trattoria A Casa Mia. Tutti i diritti riservati.</span>
-          <span>Rivoli (TO)</span>
+          <span>© {new Date().getFullYear()} La Pioletta Trattoria Piemontese. Tutti i diritti riservati.</span>
+          <span>Torino · Quadrilatero Romano</span>
         </div>
       </div>
     </footer>

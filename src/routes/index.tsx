@@ -14,17 +14,17 @@ import { MobileBar } from "@/components/site/MobileBar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Trattoria A Casa Mia · Cucina italiana a Rivoli (TO)" },
+      { title: "La Pioletta Trattoria Piemontese · Torino Quadrilatero Romano" },
       {
         name: "description",
         content:
-          "Trattoria A Casa Mia a Rivoli, Torino. Cucina italiana e piemontese, atmosfera familiare. Prenota un tavolo o chiama 011 956 1186.",
+          "La Pioletta Trattoria Piemontese a Torino, nel Quadrilatero Romano. Agnolotti, plin, vitello tonnato. Cucina autentica, vini piemontesi, atmosfera raccolta. Prenota: 351 423 3563.",
       },
-      { property: "og:title", content: "Trattoria A Casa Mia · Rivoli (TO)" },
+      { property: "og:title", content: "La Pioletta Trattoria Piemontese · Torino" },
       {
         property: "og:description",
         content:
-          "Cucina italiana, atmosfera familiare e il piacere di sentirsi davvero a casa. Corso Francia 28, Rivoli.",
+          "Tradizione piemontese, piatti fatti bene, atmosfera conviviale. Via San Domenico 4, Torino.",
       },
       { property: "og:type", content: "restaurant" },
     ],
