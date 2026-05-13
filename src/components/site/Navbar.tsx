@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/pioletta-logo-bianco.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -34,15 +33,24 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-12">
         <a
           href="#home"
-          className="flex h-14 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-xl shadow-black/20 ring-1 ring-cream/20 md:h-16 md:w-44"
+          aria-label="La Pioletta Trattoria Piemontese"
+          className="relative flex h-[3.05rem] w-[9.65rem] items-center justify-center overflow-hidden rounded-[50%] border border-cream/75 bg-[#6f1f2c] shadow-lg shadow-black/25 ring-1 ring-black/20 md:h-[3.35rem] md:w-[10.6rem]"
         >
-          <img
-            src={logo}
-            alt="La Pioletta Trattoria Piemontese"
-            className="h-full w-full scale-[1.28] object-contain"
-            width={176}
-            height={64}
-          />
+          <span className="absolute inset-[2px] rounded-[50%] border border-cream/20" aria-hidden="true" />
+          <span className="flex -translate-y-px flex-col items-center leading-none text-cream">
+            <span className="font-pioletta text-[1.62rem] leading-[0.8] md:text-[1.8rem]">
+              Pioletta
+            </span>
+            <span className="mt-1 flex items-center gap-1 font-body text-[0.34rem] font-semibold uppercase tracking-[0.05em] md:text-[0.38rem] md:tracking-[0.07em]">
+              <span>Trattoria</span>
+              <span className="relative inline-flex h-3 w-2 -rotate-6 items-center justify-center" aria-hidden="true">
+                <span className="absolute top-0 h-2 w-1.5 rounded-b-full rounded-t-[45%] border border-current" />
+                <span className="absolute top-2 h-1.5 w-px bg-current" />
+                <span className="absolute bottom-0 h-px w-2 rounded-full bg-current" />
+              </span>
+              <span>Piemontese</span>
+            </span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-9">
